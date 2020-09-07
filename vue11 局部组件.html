@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <aa></aa>
+    <bb></bb>
+
+
+</div>
+<hr>
+<div id="app2">
+    <aa></aa>
+    <bb></bb>
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    let a={
+        template:`<div>这是aa组件</div>
+        `,
+    }
+
+    let b={
+        template: `<div>这是bb组件</div>
+        `,
+    }
+    Vue.component('aa',a)
+    Vue.component('bb',b)
+    new Vue({
+        el:"#app",
+        data:{
+
+        },
+        components:{
+            'bb':b
+        }
+    })
+
+    new Vue({
+        el:'#app2'
+    })
+</script>
+</body>
+</html>

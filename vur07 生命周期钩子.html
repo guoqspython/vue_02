@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <span id="span">{{count}}</span>
+
+    <input type="button" value="数据修改" @click="change">
+
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            count:55,
+        },
+        methods:{
+            change(){
+                this.count--;
+            },
+
+        },
+        beforeCreate:function () {
+            console.log(this.count)
+        },
+        created:function () {
+            console.log(this.count)
+
+        },
+        beforeMount: function () {
+            console.log(document.getElementById('span').innerText)
+
+        },
+        mounted:function () {
+            console.log(document.getElementById('span').innerText)
+
+        },
+        beforeUpdate:function () {
+            console.log(this.count)
+            console.log(document.getElementById('span').innerText)
+
+        },
+        updated:function () {
+            console.log(this.count)
+            console.log(document.getElementById('span').innerText)
+
+        },
+        beforeDestroy:function () {
+
+
+        },
+        destroyed:function () {
+
+
+        },
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <hh></hh>
+
+
+</div>
+<script src="js/vue.min.js"></script>
+<script>
+    let a={
+        template:`    <div>这是分页组件
+    <button @click="ii">点我</button>
+        <div>嵌套div</div>
+    </div>
+        `,
+        data:function(){
+          return{
+              count:55,
+          }
+        },
+        methods:{
+            ii(){
+                alert('呜哈哈')
+            }
+        },
+        created:function () {
+            alert('赋值完事了')
+
+        },
+    }
+
+    Vue.component('hh',a)
+
+    new Vue({
+        el:'#app',
+        data:{
+
+        }
+    })
+</script>
+</body>
+</html>

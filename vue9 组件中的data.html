@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <com></com>
+
+</div>
+
+
+
+<script src="js/vue.min.js"></script>
+<script>
+    let a={
+        template:`<div>这是一个组件
+    <br>
+<span>这是组件中的data:{{username}}</span>
+
+</div>`,
+
+        data:function () {
+            return{
+                username:'小白'
+            }
+
+        }
+
+    }
+    Vue.component('com',a)
+
+
+    new Vue({
+        el:'#app',
+        data:{
+            username:'小黄'
+        }
+    })
+</script>
+</body>
+</html>
